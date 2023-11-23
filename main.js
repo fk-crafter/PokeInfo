@@ -17,7 +17,6 @@ async function fetchAndDisplayPokemon(offset, limit) {
             const image = document.createElement('img');
             image.src = pokemonData.sprites.front_default;
 
-            // Add event listener to the card
             pokemonCard.addEventListener('click', () => {
                 openModal(pokemonData);
             });
@@ -35,8 +34,7 @@ async function fetchAndDisplayPokemon(offset, limit) {
 function openModal(pokemonData) {
     const modalContainer = document.getElementById('modal-container');
     const modalContent = document.getElementById('modal-content');
-    
-    // Clear previous content
+
     modalContent.innerHTML = '';
 
     const nameElement = document.createElement('h2');
