@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background: linear-gradient(90deg, #FFCB05, #FF4500);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ff4500;
+    margin: 20px 0;
+}
+
+#search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#search-input-container, #search-button-container {
+    margin: 10px 0;
+}
+
+#pokemonName {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ff4500;
+    border-radius: 0;
+    width: 200px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #fff;
+    color: #333;
+    margin-right: 10px;
+}
+
+#searchButton {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #ff5722;
+}
+
+#pokemon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.pokemon-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(25% - 40px);
+    min-width: 200px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #ffeb3b;
+}
+
+.pokemon-card img {
+    max-width: 100px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.pokemon-card h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#pokemonInfo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+ .modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #FFCB05; 
+    border: 2px solid #ff4500;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 450px; 
+    margin: auto; 
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.modal-content img {
+    max-width: 250px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 12px;
+}
