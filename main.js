@@ -12,11 +12,12 @@ async function fetchAndDisplayPokemon(offset, limit) {
             pokemonCard.classList.add('pokemon-card');
 
             const nameElement = document.createElement('h2');
-            nameElement.textContent = `Nom: ${pokemonData.name}`;
+            nameElement.textContent = `Name : ${pokemonData.name}`;
 
             const image = document.createElement('img');
             image.src = pokemonData.sprites.front_default;
 
+            // Add event listener to the card
             pokemonCard.addEventListener('click', () => {
                 openModal(pokemonData);
             });
@@ -34,7 +35,8 @@ async function fetchAndDisplayPokemon(offset, limit) {
 function openModal(pokemonData) {
     const modalContainer = document.getElementById('modal-container');
     const modalContent = document.getElementById('modal-content');
-
+    
+    // Clear previous content
     modalContent.innerHTML = '';
 
     const nameElement = document.createElement('h2');
@@ -62,23 +64,28 @@ function openModal(pokemonData) {
     modalContent.appendChild(heightElement);
     modalContent.appendChild(weightElement);
 
+    // Show the modal
     modalContainer.style.display = 'flex';
 }
 
 function closeModal() {
     const modalContainer = document.getElementById('modal-container');
     
+    // Hide the modal
     modalContainer.style.display = 'none';
 }
 
+// Close the modal when clicking outside the modal content
 const modalContainer = document.getElementById('modal-container');
 modalContainer.addEventListener('click', closeModal);
 
+// Prevent the modal from closing when clicking inside the modal content
 const modalContent = document.getElementById('modal-content');
 modalContent.addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
+// Close the modal when pressing the Escape key
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         closeModal();
@@ -105,6 +112,7 @@ function searchPokemon() {
     });
 }
 
+// Appuyer sur la touche "Entrée" pour rechercher
 pokemonNameInput.addEventListener('keyup', event => {
     if (event.key === 'Enter') {
         searchPokemon();
@@ -113,5 +121,6 @@ pokemonNameInput.addEventListener('keyup', event => {
 
 searchButton.addEventListener('click', searchPokemon);
 
+// Afficher les 50 Pokémon initiaux
 const limit = 50;
 fetchAndDisplayPokemon(0, limit);
