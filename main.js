@@ -105,7 +105,6 @@ function searchPokemon() {
     });
 }
 
-// Appuyer sur la touche "Entrée" pour rechercher
 pokemonNameInput.addEventListener('keyup', event => {
     if (event.key === 'Enter') {
         searchPokemon();
