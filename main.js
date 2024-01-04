@@ -113,6 +113,5 @@ pokemonNameInput.addEventListener('keyup', event => {
 
 searchButton.addEventListener('click', searchPokemon);
 
-// Afficher les 50 Pokémon initiaux
 const limit = 50;
 fetchAndDisplayPokemon(0, limit);
