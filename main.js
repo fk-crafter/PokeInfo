@@ -35,7 +35,6 @@ function openModal(pokemonData) {
     const modalContainer = document.getElementById('modal-container');
     const modalContent = document.getElementById('modal-content');
     
-    // Clear previous content
     modalContent.innerHTML = '';
 
     const nameElement = document.createElement('h2');
