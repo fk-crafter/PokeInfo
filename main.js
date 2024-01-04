@@ -27,7 +27,7 @@ async function fetchAndDisplayPokemon(offset, limit) {
 
             pokemonList.appendChild(pokemonCard);
         }
-    } catch (error) {
+    } ca (error) {
         console.error('Erreur lors de la récupération des données Pokémon :', error);
     }
 }
