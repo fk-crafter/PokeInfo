@@ -17,7 +17,6 @@ async function fetchAndDisplayPokemon(offset, limit) {
             const image = document.createElement('img');
             image.src = pokemonData.sprites.front_default;
 
-            // Add event listener to the card
             pokemonCard.addEventListener('click', () => {
                 openModal(pokemonData);
             });
