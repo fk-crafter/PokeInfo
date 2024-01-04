@@ -1,4 +1,4 @@
-async function fetchAndDisplayPokemon(offset, limit) {
+ async function fetchAndDisplayPokemon(offset, limit) {
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
         const data = await response.json();
@@ -74,13 +74,11 @@ function closeModal() {
 const modalContainer = document.getElementById('modal-container');
 modalContainer.addEventListener('click', closeModal);
 
-// Prevent the modal from closing when clicking inside the modal content
 const modalContent = document.getElementById('modal-content');
 modalContent.addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
-// Close the modal when pressing the Escape key
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
         closeModal();
