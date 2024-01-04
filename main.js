@@ -68,7 +68,6 @@ function openModal(pokemonData) {
 function closeModal() {
     const modalContainer = document.getElementById('modal-container');
     
-    // Hide the modal
     modalContainer.style.display = 'none';
 }
 
