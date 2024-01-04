@@ -62,7 +62,6 @@ function openModal(pokemonData) {
     modalContent.appendChild(heightElement);
     modalContent.appendChild(weightElement);
 
-    // Show the modal
     modalContainer.style.display = 'flex';
 }
 
