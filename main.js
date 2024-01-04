@@ -71,7 +71,6 @@ function closeModal() {
     modalContainer.style.display = 'none';
 }
 
-// Close the modal when clicking outside the modal content
 const modalContainer = document.getElementById('modal-container');
 modalContainer.addEventListener('click', closeModal);
 
